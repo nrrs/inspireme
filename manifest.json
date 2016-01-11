@@ -1,0 +1,23 @@
+{
+  "name": "Inspire Me",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description" : "A chrome extension that displays an inspirational quote on a new tab (using the Forismatic API).",
+
+  "chrome_url_overrides" : {
+    "newtab": "newtab.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [ "jquery-1.11.2.min.js", "script.js" ]
+    }
+  ],
+
+  "permissions": [
+    "https://*/getJSON*"
+  ]
+
+  //"devtools_page": "devtools/devtools.html"
+}
